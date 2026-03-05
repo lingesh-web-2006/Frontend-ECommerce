@@ -9,7 +9,7 @@ function SendEmail() {
   const [message, setmessage] = useState("");
   const HandleSubmit = async () => {
     try {
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8085";
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "https://deployement-e-commerce-production-3604.up.railway.app";
       await axios.post(`${apiBaseUrl}/api/email/send`, { toEmail, subject, message });
       alert("Email Sent!");
     }
