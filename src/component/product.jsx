@@ -8,7 +8,7 @@ function Product() {
 
   useEffect(() => {
     setIsLoading(true);
-    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8085";
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "https://deployement-e-commerce-production-3604.up.railway.app/";
     fetch(`${apiBaseUrl}/products`)
       .then((res) => {
         if (!res.ok) {
