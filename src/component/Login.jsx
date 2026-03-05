@@ -16,7 +16,7 @@ function Login({ onLogin }) {
         try {
             // Trying to hit the backend to verify credentials
             // Using /allproducts as a connectivity check with basic auth
-            const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8085";
+            const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "https://deployement-e-commerce-production-3604.up.railway.app/";
             await axios.get(`${apiBaseUrl}/api/auth/login`, {
                 headers: { Authorization: `Basic ${token}` }
             });
