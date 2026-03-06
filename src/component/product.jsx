@@ -1,4 +1,4 @@
- import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Product() {
@@ -11,13 +11,12 @@ function Product() {
 
     // Use VITE_API_BASE_URL from .env file
     const apiBaseUrl =
-      import.meta.env.VITE_API_BASE_URL ||
-      "http://localhost:8080"; // fallback to local backend
+      import.meta.env.VITE_API_BASE_URL || "http://localhost:8080"; // fallback to local backend
 
-    fetch(`${apiBaseUrl}/products`)
+    fetch(${apiBaseUrl}/products)
       .then((res) => {
         if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status`});
+          throw new Error(HTTP error! status: ${res.status});
         }
         return res.json();
       })
@@ -52,8 +51,8 @@ function Product() {
     }
 
     localStorage.setItem("shopease_cart", JSON.stringify(cart));
-    <button onClick={()=> {alert(`${p.name} added to cart!`);}}>Add To Cart</button>
-      };
+    alert(${p.name} added to cart!);
+  };
 
   if (isLoading) {
     return (
@@ -114,21 +113,6 @@ function Product() {
                     Premium
                   </span>
                 </div>
-                <button className="absolute bottom-6 right-6 w-12 h-12 glass rounded-2xl flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 shadow-2xl">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </button>
               </div>
 
               <div className="p-8 flex flex-col flex-1 gap-6">
