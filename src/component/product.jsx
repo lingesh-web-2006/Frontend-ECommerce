@@ -13,7 +13,7 @@ function Product() {
     const apiBaseUrl =
       import.meta.env.VITE_API_BASE_URL || "https://deployement-e-commerce-production-3604.up.railway.app"; // fallback to local backend
 
-    fetch(`${apiBaseUrl}/products`)
+    fetch("https://deployement-e-commerce-production-3604.up.railway.app/products")
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
