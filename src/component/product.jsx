@@ -14,7 +14,7 @@ function Product() {
       import.meta.env.VITE_API_BASE_URL ||
       "http://localhost:8080"; // fallback to local backend
 
-    fetch(${apiBaseUrl}/products)
+    fetch(`${apiBaseUrl}/products`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(HTTP error! status: ${res.status});
