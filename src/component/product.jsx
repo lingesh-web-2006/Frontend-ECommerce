@@ -52,7 +52,7 @@ function Product() {
     }
 
     localStorage.setItem("shopease_cart", JSON.stringify(cart));
-    alert(${p.name} added to cart!);
+    alert(`${p.name} added to cart!`);
   };
 
   if (isLoading) {
