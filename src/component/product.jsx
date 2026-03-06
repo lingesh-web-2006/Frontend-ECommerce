@@ -52,7 +52,7 @@ function Product() {
     }
 
     localStorage.setItem("shopease_cart", JSON.stringify(cart));
-    <button onClick={()=> alert(`${p.name} added to cart!`)}>Add To Cart</button>
+    <button onClick={()=> {alert(`${p.name} added to cart!`);}}>Add To Cart</button>
       };
 
   if (isLoading) {
