@@ -11,7 +11,7 @@ function Product() {
 
     // Use VITE_API_BASE_URL from .env file
     const apiBaseUrl =
-      import.meta.env.VITE_API_BASE_URL || "http://localhost:8080"; // fallback to local backend
+      import.meta.env.VITE_API_BASE_URL || "https://deployement-e-commerce-production-3604.up.railway.app"; // fallback to local backend
 
     fetch(`${apiBaseUrl}/products`)
       .then((res) => {
